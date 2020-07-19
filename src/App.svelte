@@ -1,5 +1,6 @@
 <script>
   import Modal from "./Modal.svelte";
+  import Nav from "./Nav.svelte";
 
   let showModal = false;
   export let name;
@@ -28,6 +29,7 @@
 </style>
 
 <main>
+  <Nav />
   <h1>Hello {name}!</h1>
   <p>
     Visit the
