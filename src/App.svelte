@@ -1,6 +1,7 @@
 <script>
   import Modal from "./Modal.svelte";
   import Nav from "./Nav.svelte";
+  import NewOrder from "./NewOrder.svelte";
 
   let showModal = false;
   export let name;
@@ -27,9 +28,10 @@
     }
   }
 </style>
-
-<main>
+<header>
   <Nav />
+</header>
+<main>
   <h1>Hello {name}!</h1>
   <p>
     Visit the
@@ -37,6 +39,7 @@
     to learn how to build Svelte apps.
   </p>
   <button on:click={() => (showModal = true)}>show modal</button>
+  <NewOrder />
 </main>
 {#if showModal}
   <Modal on:close={() => (showModal = false)}>
